@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityID" type="xs:int" />
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PlaceToVisitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlateCode" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Population" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TransportationServiceID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WhatFamousID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="City" nillable="true" type="tns:City" />
+  <xs:complexType name="ArrayOfCity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCity" nillable="true" type="tns:ArrayOfCity" />
+  <xs:complexType name="Town">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PartyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PlaceToVisitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Population" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TownID" type="xs:int" />
+      <xs:element minOccurs="0" name="TownName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportationServiceID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="WhatFamousID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Town" nillable="true" type="tns:Town" />
+  <xs:complexType name="ArrayOfTown">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Town" nillable="true" type="tns:Town" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTown" nillable="true" type="tns:ArrayOfTown" />
+  <xs:complexType name="Village">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Picture" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="PlaceToVisitID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Population" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TownID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="VillageID" type="xs:int" />
+      <xs:element minOccurs="0" name="VillageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhatFamousID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Village" nillable="true" type="tns:Village" />
+  <xs:complexType name="ArrayOfVillage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Village" nillable="true" type="tns:Village" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVillage" nillable="true" type="tns:ArrayOfVillage" />
+  <xs:complexType name="Region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Region" nillable="true" type="tns:Region" />
+  <xs:complexType name="ArrayOfRegion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Region" nillable="true" type="tns:Region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegion" nillable="true" type="tns:ArrayOfRegion" />
+  <xs:complexType name="PlacesToVisit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlaceToVisit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceToVisitID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlacesToVisit" nillable="true" type="tns:PlacesToVisit" />
+  <xs:complexType name="ArrayOfPlacesToVisit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlacesToVisit" nillable="true" type="tns:PlacesToVisit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlacesToVisit" nillable="true" type="tns:ArrayOfPlacesToVisit" />
+  <xs:complexType name="WhatFamou">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WhatFamous" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WhatFamousID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WhatFamou" nillable="true" type="tns:WhatFamou" />
+  <xs:complexType name="ArrayOfWhatFamou">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WhatFamou" nillable="true" type="tns:WhatFamou" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWhatFamou" nillable="true" type="tns:ArrayOfWhatFamou" />
+  <xs:complexType name="TransportationService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TransportationService1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportationServicesID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TransportationService" nillable="true" type="tns:TransportationService" />
+  <xs:complexType name="ArrayOfTransportationService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransportationService" nillable="true" type="tns:TransportationService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransportationService" nillable="true" type="tns:ArrayOfTransportationService" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="RulingParty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Party" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartyID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RulingParty" nillable="true" type="tns:RulingParty" />
+  <xs:complexType name="ArrayOfRulingParty">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RulingParty" nillable="true" type="tns:RulingParty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRulingParty" nillable="true" type="tns:ArrayOfRulingParty" />
+</xs:schema>

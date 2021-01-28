@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurkeyProvincesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlateCode" Type="int" />
+    <Property Name="PlaceToVisitID" Type="int" />
+    <Property Name="WhatFamousID" Type="int" />
+    <Property Name="RegionID" Type="int" />
+    <Property Name="TransportationServiceID" Type="int" />
+    <Property Name="PartyID" Type="int" />
+  </EntityType>
+  <EntityType Name="PlacesToVisit">
+    <Key>
+      <PropertyRef Name="PlaceToVisitID" />
+    </Key>
+    <Property Name="PlaceToVisitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlaceToVisit" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RulingParty">
+    <Key>
+      <PropertyRef Name="PartyID" />
+    </Key>
+    <Property Name="PartyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Party" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Town">
+    <Key>
+      <PropertyRef Name="TownID" />
+    </Key>
+    <Property Name="TownID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TownName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="PlaceToVisitID" Type="int" />
+    <Property Name="WhatFamousID" Type="int" />
+    <Property Name="TransportationServiceID" Type="int" />
+    <Property Name="PartyID" Type="int" />
+  </EntityType>
+  <EntityType Name="TransportationServices">
+    <Key>
+      <PropertyRef Name="TransportationServicesID" />
+    </Key>
+    <Property Name="TransportationServicesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransportationService" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="15" />
+    <Property Name="Photo" Type="image" />
+    <Property Name="Gender" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Village">
+    <Key>
+      <PropertyRef Name="VillageID" />
+    </Key>
+    <Property Name="VillageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VillageName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlaceToVisitID" Type="int" />
+    <Property Name="WhatFamousID" Type="int" />
+    <Property Name="TownID" Type="int" />
+  </EntityType>
+  <EntityType Name="WhatFamous">
+    <Key>
+      <PropertyRef Name="WhatFamousID" />
+    </Key>
+    <Property Name="WhatFamousID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WhatFamous" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityContainer Name="TurkeyProvincesModelStoreContainer">
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PlacesToVisit" EntityType="Self.PlacesToVisit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RulingParty" EntityType="Self.RulingParty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Town" EntityType="Self.Town" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransportationServices" EntityType="Self.TransportationServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Village" EntityType="Self.Village" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WhatFamous" EntityType="Self.WhatFamous" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

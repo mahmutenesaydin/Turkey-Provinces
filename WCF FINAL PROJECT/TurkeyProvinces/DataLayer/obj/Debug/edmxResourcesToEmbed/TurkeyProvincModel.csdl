@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurkeyProvincModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlateCode" Type="Int32" />
+    <Property Name="PlaceToVisitID" Type="Int32" />
+    <Property Name="WhatFamousID" Type="Int32" />
+    <Property Name="RegionID" Type="Int32" />
+    <Property Name="TransportationServiceID" Type="Int32" />
+    <Property Name="PartyID" Type="Int32" />
+    <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="PlacesToVisit">
+    <Key>
+      <PropertyRef Name="PlaceToVisitID" />
+    </Key>
+    <Property Name="PlaceToVisitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlaceToVisit" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RulingParty">
+    <Key>
+      <PropertyRef Name="PartyID" />
+    </Key>
+    <Property Name="PartyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Party" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Town">
+    <Key>
+      <PropertyRef Name="TownID" />
+    </Key>
+    <Property Name="TownID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TownName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CityID" Type="Int32" />
+    <Property Name="PlaceToVisitID" Type="Int32" />
+    <Property Name="WhatFamousID" Type="Int32" />
+    <Property Name="TransportationServiceID" Type="Int32" />
+    <Property Name="PartyID" Type="Int32" />
+    <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TransportationService">
+    <Key>
+      <PropertyRef Name="TransportationServicesID" />
+    </Key>
+    <Property Name="TransportationServicesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransportationService1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Village">
+    <Key>
+      <PropertyRef Name="VillageID" />
+    </Key>
+    <Property Name="VillageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VillageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PlaceToVisitID" Type="Int32" />
+    <Property Name="WhatFamousID" Type="Int32" />
+    <Property Name="TownID" Type="Int32" />
+    <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="WhatFamou">
+    <Key>
+      <PropertyRef Name="WhatFamousID" />
+    </Key>
+    <Property Name="WhatFamousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WhatFamous" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="TurkeyProvincesEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="PlacesToVisits" EntityType="Self.PlacesToVisit" />
+    <EntitySet Name="Regions" EntityType="Self.Region" />
+    <EntitySet Name="RulingParties" EntityType="Self.RulingParty" />
+    <EntitySet Name="Towns" EntityType="Self.Town" />
+    <EntitySet Name="TransportationServices" EntityType="Self.TransportationService" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Villages" EntityType="Self.Village" />
+    <EntitySet Name="WhatFamous" EntityType="Self.WhatFamou" />
+  </EntityContainer>
+</Schema>

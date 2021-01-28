@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceContract" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/TP5/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/TP5/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/TP5/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataLayer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceContract_AddCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListCity_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListCity" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListCity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddTown_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTown" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddTown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateTown_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTown" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateTown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteTown_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTown" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteTown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListTown_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTown" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListTown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddVillage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVillage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVillage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListVillage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRegion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddPlacesToVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlacesToVisit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddPlacesToVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlacesToVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdatePlacesToVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlacesToVisit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdatePlacesToVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlacesToVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeletePlacesToVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlacesToVisit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeletePlacesToVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlacesToVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListPlacesToVisit_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlacesToVisit" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListPlacesToVisit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListPlacesToVisitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddWhatFamou_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWhatFamou" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddWhatFamou_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWhatFamouResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateWhatFamou_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWhatFamou" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateWhatFamou_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWhatFamouResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteWhatFamou_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWhatFamou" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteWhatFamou_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWhatFamouResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListWhatFamou_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListWhatFamou" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListWhatFamou_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListWhatFamouResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddTransportationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransportationService" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddTransportationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTransportationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateTransportationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransportationService" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateTransportationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTransportationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteTransportationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTransportationService" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteTransportationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTransportationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListTransportationService_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListTransportationService" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListTransportationService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListTransportationServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddRulingParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRulingParty" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_AddRulingParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRulingPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateRulingParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRulingParty" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_UpdateRulingParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRulingPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteRulingParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRulingParty" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_DeleteRulingParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRulingPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListRulingParty_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListRulingParty" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListRulingParty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListRulingPartyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListByBool_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListByBool" />
+  </wsdl:message>
+  <wsdl:message name="IServiceContract_ListByBool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListByBoolResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceContract">
+    <wsdl:operation name="AddCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddCity" message="tns:IServiceContract_AddCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddCityResponse" message="tns:IServiceContract_AddCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateCity" message="tns:IServiceContract_UpdateCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateCityResponse" message="tns:IServiceContract_UpdateCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteCity" message="tns:IServiceContract_DeleteCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteCityResponse" message="tns:IServiceContract_DeleteCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListCity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListCity" message="tns:IServiceContract_ListCity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListCityResponse" message="tns:IServiceContract_ListCity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddTown" message="tns:IServiceContract_AddTown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddTownResponse" message="tns:IServiceContract_AddTown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateTown" message="tns:IServiceContract_UpdateTown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateTownResponse" message="tns:IServiceContract_UpdateTown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteTown" message="tns:IServiceContract_DeleteTown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteTownResponse" message="tns:IServiceContract_DeleteTown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListTown" message="tns:IServiceContract_ListTown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListTownResponse" message="tns:IServiceContract_ListTown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddVillage" message="tns:IServiceContract_AddVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddVillageResponse" message="tns:IServiceContract_AddVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateVillage" message="tns:IServiceContract_UpdateVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateVillageResponse" message="tns:IServiceContract_UpdateVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteVillage" message="tns:IServiceContract_DeleteVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteVillageResponse" message="tns:IServiceContract_DeleteVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListVillage" message="tns:IServiceContract_ListVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListVillageResponse" message="tns:IServiceContract_ListVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddRegion" message="tns:IServiceContract_AddRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddRegionResponse" message="tns:IServiceContract_AddRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateRegion" message="tns:IServiceContract_UpdateRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateRegionResponse" message="tns:IServiceContract_UpdateRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteRegion" message="tns:IServiceContract_DeleteRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteRegionResponse" message="tns:IServiceContract_DeleteRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListRegion" message="tns:IServiceContract_ListRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListRegionResponse" message="tns:IServiceContract_ListRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlacesToVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddPlacesToVisit" message="tns:IServiceContract_AddPlacesToVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddPlacesToVisitResponse" message="tns:IServiceContract_AddPlacesToVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlacesToVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdatePlacesToVisit" message="tns:IServiceContract_UpdatePlacesToVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdatePlacesToVisitResponse" message="tns:IServiceContract_UpdatePlacesToVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlacesToVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeletePlacesToVisit" message="tns:IServiceContract_DeletePlacesToVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeletePlacesToVisitResponse" message="tns:IServiceContract_DeletePlacesToVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPlacesToVisit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListPlacesToVisit" message="tns:IServiceContract_ListPlacesToVisit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListPlacesToVisitResponse" message="tns:IServiceContract_ListPlacesToVisit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWhatFamou">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddWhatFamou" message="tns:IServiceContract_AddWhatFamou_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddWhatFamouResponse" message="tns:IServiceContract_AddWhatFamou_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWhatFamou">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateWhatFamou" message="tns:IServiceContract_UpdateWhatFamou_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateWhatFamouResponse" message="tns:IServiceContract_UpdateWhatFamou_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWhatFamou">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteWhatFamou" message="tns:IServiceContract_DeleteWhatFamou_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteWhatFamouResponse" message="tns:IServiceContract_DeleteWhatFamou_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListWhatFamou">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListWhatFamou" message="tns:IServiceContract_ListWhatFamou_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListWhatFamouResponse" message="tns:IServiceContract_ListWhatFamou_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTransportationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddTransportationService" message="tns:IServiceContract_AddTransportationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddTransportationServiceResponse" message="tns:IServiceContract_AddTransportationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransportationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateTransportationService" message="tns:IServiceContract_UpdateTransportationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateTransportationServiceResponse" message="tns:IServiceContract_UpdateTransportationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTransportationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteTransportationService" message="tns:IServiceContract_DeleteTransportationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteTransportationServiceResponse" message="tns:IServiceContract_DeleteTransportationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListTransportationService">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListTransportationService" message="tns:IServiceContract_ListTransportationService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListTransportationServiceResponse" message="tns:IServiceContract_ListTransportationService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddUser" message="tns:IServiceContract_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddUserResponse" message="tns:IServiceContract_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateUser" message="tns:IServiceContract_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateUserResponse" message="tns:IServiceContract_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteUser" message="tns:IServiceContract_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteUserResponse" message="tns:IServiceContract_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListUser" message="tns:IServiceContract_ListUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListUserResponse" message="tns:IServiceContract_ListUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRulingParty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/AddRulingParty" message="tns:IServiceContract_AddRulingParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/AddRulingPartyResponse" message="tns:IServiceContract_AddRulingParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRulingParty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/UpdateRulingParty" message="tns:IServiceContract_UpdateRulingParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/UpdateRulingPartyResponse" message="tns:IServiceContract_UpdateRulingParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRulingParty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/DeleteRulingParty" message="tns:IServiceContract_DeleteRulingParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/DeleteRulingPartyResponse" message="tns:IServiceContract_DeleteRulingParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListRulingParty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListRulingParty" message="tns:IServiceContract_ListRulingParty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListRulingPartyResponse" message="tns:IServiceContract_ListRulingParty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/Login" message="tns:IServiceContract_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/LoginResponse" message="tns:IServiceContract_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListByBool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceContract/ListByBool" message="tns:IServiceContract_ListByBool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceContract/ListByBoolResponse" message="tns:IServiceContract_ListByBool_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceContract" type="tns:IServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddCity">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCity">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCity">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListCity">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTown">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddTown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTown">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateTown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTown">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteTown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListTown">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListTown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddVillage">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVillage">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVillage">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListVillage">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegion">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegion">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRegion">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlacesToVisit">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddPlacesToVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlacesToVisit">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdatePlacesToVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlacesToVisit">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeletePlacesToVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPlacesToVisit">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListPlacesToVisit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWhatFamou">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddWhatFamou" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWhatFamou">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateWhatFamou" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWhatFamou">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteWhatFamou" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListWhatFamou">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListWhatFamou" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTransportationService">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddTransportationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransportationService">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateTransportationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTransportationService">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteTransportationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListTransportationService">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListTransportationService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRulingParty">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/AddRulingParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRulingParty">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/UpdateRulingParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRulingParty">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/DeleteRulingParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListRulingParty">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListRulingParty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListByBool">
+      <soap:operation soapAction="http://tempuri.org/IServiceContract/ListByBool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceContract">
+    <wsdl:port name="BasicHttpBinding_IServiceContract" binding="tns:BasicHttpBinding_IServiceContract">
+      <soap:address location="http://localhost/TP5/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurkeyProvincesModelStoreContainer" CdmEntityContainer="TurkeyProvincesEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PlateCode" ColumnName="PlateCode" />
+          <ScalarProperty Name="PlaceToVisit" ColumnName="PlaceToVisit" />
+          <ScalarProperty Name="WhatFamous" ColumnName="WhatFamous" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="TransportationService" ColumnName="TransportationService" />
+          <ScalarProperty Name="Party" ColumnName="Party" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlacesToVisits">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.PlacesToVisit">
+        <MappingFragment StoreEntitySet="PlacesToVisit">
+          <ScalarProperty Name="PlaceToVisitID" ColumnName="PlaceToVisitID" />
+          <ScalarProperty Name="PlaceToVisit" ColumnName="PlaceToVisit" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RulingParties">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.RulingParty">
+        <MappingFragment StoreEntitySet="RulingParty">
+          <ScalarProperty Name="PartyID" ColumnName="PartyID" />
+          <ScalarProperty Name="Party" ColumnName="Party" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Towns">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.Town">
+        <MappingFragment StoreEntitySet="Town">
+          <ScalarProperty Name="TownID" ColumnName="TownID" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="PlaceToVisit" ColumnName="PlaceToVisit" />
+          <ScalarProperty Name="WhatFamous" ColumnName="WhatFamous" />
+          <ScalarProperty Name="TransportationService" ColumnName="TransportationService" />
+          <ScalarProperty Name="Party" ColumnName="Party" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TransportationServices">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.TransportationService">
+        <MappingFragment StoreEntitySet="TransportationServices">
+          <ScalarProperty Name="TransportationServicesID" ColumnName="TransportationServicesID" />
+          <ScalarProperty Name="TransportationService1" ColumnName="TransportationService" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Villages">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.Village">
+        <MappingFragment StoreEntitySet="Village">
+          <ScalarProperty Name="VillageID" ColumnName="VillageID" />
+          <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+          <ScalarProperty Name="PlaceToVisit" ColumnName="PlaceToVisit" />
+          <ScalarProperty Name="WhatFamous" ColumnName="WhatFamous" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhatFamous">
+      <EntityTypeMapping TypeName="TurkeyProvincesModel.WhatFamou">
+        <MappingFragment StoreEntitySet="WhatFamous">
+          <ScalarProperty Name="WhatFamousID" ColumnName="WhatFamousID" />
+          <ScalarProperty Name="WhatFamous" ColumnName="WhatFamous" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+          <ScalarProperty Name="TownName" ColumnName="TownName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

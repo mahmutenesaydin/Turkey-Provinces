@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69F96F2B-9304-4E62-8295-D8FED49416C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.8.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\..\..\..\Desktop\LoginCoffee\Youtube\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\..\..\..\Desktop\LoginCoffee\Youtube\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\..\..\..\Desktop\Bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginAdmin.Designer.cs">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Discovery\PlacesToVisitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Discovery\PlacesToVisitForm.Designer.cs">
+      <DependentUpon>PlacesToVisitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\CityReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\CityReport.Designer.cs">
+      <DependentUpon>CityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\PieCharts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PieCharts.Designer.cs">
+      <DependentUpon>PieCharts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\ReportMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\ReportMainForm.Designer.cs">
+      <DependentUpon>ReportMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\TownReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\TownReport.Designer.cs">
+      <DependentUpon>TownReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\VillageReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\VillageReport.Designer.cs">
+      <DependentUpon>VillageReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserAuthorization.Designer.cs">
+      <DependentUpon>UserAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserCitysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserCitysForm.Designer.cs">
+      <DependentUpon>UserCitysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserMainForm.Designer.cs">
+      <DependentUpon>UserMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserRegistirationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserRegistirationForm.Designer.cs">
+      <DependentUpon>UserRegistirationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserTownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserTownForm.Designer.cs">
+      <DependentUpon>UserTownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User\UserVillageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User\UserVillageForm.Designer.cs">
+      <DependentUpon>UserVillageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\wasd\CityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wasd\CityForm.Designer.cs">
+      <DependentUpon>CityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\RegionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\RegionForm.Designer.cs">
+      <DependentUpon>RegionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegistirationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegistirationForm.Designer.cs">
+      <DependentUpon>RegistirationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\RulingPartyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\RulingPartyForm.Designer.cs">
+      <DependentUpon>RulingPartyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\wasd\TownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wasd\TownForm.Designer.cs">
+      <DependentUpon>TownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\TransportationServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherFeatures\TransportationServiceForm.Designer.cs">
+      <DependentUpon>TransportationServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\wasd\VillageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\wasd\VillageForm.Designer.cs">
+      <DependentUpon>VillageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Discovery\WhatFamousForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Discovery\WhatFamousForm.Designer.cs">
+      <DependentUpon>WhatFamousForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TPServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurkeyProvinceSerivesss\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurkeyProvinceService4\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurkeyProvinceServicee\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurkeyProvinceServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TurkeyProvinceServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TurkeyProvincesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurkeyProvincesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurkeyProvincesDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurkeyProvincesDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TurkeyProvincesDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TurkeyProvincesDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\LoginAdmin.resx">
+      <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Discovery\PlacesToVisitForm.resx">
+      <DependentUpon>PlacesToVisitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\CityReport.resx">
+      <DependentUpon>CityReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PieCharts.resx">
+      <DependentUpon>PieCharts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\Report3.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\ReportMainForm.resx">
+      <DependentUpon>ReportMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\TownReport.resx">
+      <DependentUpon>TownReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\VillageReport.resx">
+      <DependentUpon>VillageReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserAuthorization.resx">
+      <DependentUpon>UserAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserCitysForm.resx">
+      <DependentUpon>UserCitysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserMainForm.resx">
+      <DependentUpon>UserMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserRegistirationForm.resx">
+      <DependentUpon>UserRegistirationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserTownForm.resx">
+      <DependentUpon>UserTownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\UserVillageForm.resx">
+      <DependentUpon>UserVillageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\wasd\CityForm.resx">
+      <DependentUpon>CityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OtherFeatures\RegionForm.resx">
+      <DependentUpon>RegionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegistirationForm.resx">
+      <DependentUpon>RegistirationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OtherFeatures\RulingPartyForm.resx">
+      <DependentUpon>RulingPartyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wasd\TownForm.resx">
+      <DependentUpon>TownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OtherFeatures\TransportationServiceForm.resx">
+      <DependentUpon>TransportationServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\wasd\VillageForm.resx">
+      <DependentUpon>VillageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Discovery\WhatFamousForm.resx">
+      <DependentUpon>WhatFamousForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataLayer.City.datasource" />
+    <None Include="Properties\DataSources\DataLayer.PlacesToVisit.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Region.datasource" />
+    <None Include="Properties\DataSources\DataLayer.RulingParty.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Town.datasource" />
+    <None Include="Properties\DataSources\DataLayer.TransportationService.datasource" />
+    <None Include="Properties\DataSources\DataLayer.User.datasource" />
+    <None Include="Properties\DataSources\DataLayer.Village.datasource" />
+    <None Include="Properties\DataSources\DataLayer.WhatFamou.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\PresentationLayer.TPServiceReference.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TPServiceReference\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPServiceReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPServiceReference\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TPServiceReference\ServiceContract.wsdl" />
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\PresentationLayer.TurkeyProvinceSerivesss.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceSerivesss\ServiceContract.wsdl" />
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\PresentationLayer.TurkeyProvinceService4.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceService4\ServiceContract.wsdl" />
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\PresentationLayer.TurkeyProvinceServicee.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServicee\ServiceContract.wsdl" />
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\PresentationLayer.TurkeyProvinceServiceReference.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServiceReference\ServiceContract.wsdl" />
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.PlacesToVisit.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.RulingParty.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.Town.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.TransportationService.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.Village.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\PresentationLayer.TurkeyProvinceServices.WhatFamou.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TurkeyProvinceServices\ServiceContract.wsdl" />
+    <None Include="TurkeyProvincesDataSet.xsc">
+      <DependentUpon>TurkeyProvincesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TurkeyProvincesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurkeyProvincesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurkeyProvincesDataSet.xss">
+      <DependentUpon>TurkeyProvincesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TurkeyProvincesDataSet1.xsc">
+      <DependentUpon>TurkeyProvincesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TurkeyProvincesDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurkeyProvincesDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurkeyProvincesDataSet1.xss">
+      <DependentUpon>TurkeyProvincesDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TurkeyProvincesDataSet2.xsc">
+      <DependentUpon>TurkeyProvincesDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TurkeyProvincesDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TurkeyProvincesDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TurkeyProvincesDataSet2.xss">
+      <DependentUpon>TurkeyProvincesDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TPServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TurkeyProvinceSerivesss\" />
+    <WCFMetadataStorage Include="Service References\TurkeyProvinceService4\" />
+    <WCFMetadataStorage Include="Service References\TurkeyProvinceServicee\" />
+    <WCFMetadataStorage Include="Service References\TurkeyProvinceServiceReference\" />
+    <WCFMetadataStorage Include="Service References\TurkeyProvinceServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServices\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServices\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServicee\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServicee\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceServicee\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceSerivesss\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceSerivesss\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceSerivesss\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceService4\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceService4\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TurkeyProvinceService4\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TPServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{df3818e6-1cff-4552-90d5-96d1ff4fc1bf}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{c70ea6c8-e390-4112-864f-5189e1767ccc}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

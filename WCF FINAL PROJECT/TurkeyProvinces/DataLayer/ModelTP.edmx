@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PlateCode" Type="int" />
+          <Property Name="PlaceToVisitID" Type="int" />
+          <Property Name="WhatFamousID" Type="int" />
+          <Property Name="RegionID" Type="int" />
+          <Property Name="TransportationServiceID" Type="int" />
+          <Property Name="PartyID" Type="int" />
+          <Property Name="Population" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="image" />
+        </EntityType>
+        <EntityType Name="PlacesToVisit">
+          <Key>
+            <PropertyRef Name="PlaceToVisitID" />
+          </Key>
+          <Property Name="PlaceToVisitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlaceToVisit" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="RegionID" />
+          </Key>
+          <Property Name="RegionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegionName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RulingParty">
+          <Key>
+            <PropertyRef Name="PartyID" />
+          </Key>
+          <Property Name="PartyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Party" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Town">
+          <Key>
+            <PropertyRef Name="TownID" />
+          </Key>
+          <Property Name="TownID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TownName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CityID" Type="int" />
+          <Property Name="PlaceToVisitID" Type="int" />
+          <Property Name="WhatFamousID" Type="int" />
+          <Property Name="TransportationServiceID" Type="int" />
+          <Property Name="PartyID" Type="int" />
+          <Property Name="Population" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="image" />
+        </EntityType>
+        <EntityType Name="TransportationServices">
+          <Key>
+            <PropertyRef Name="TransportationServicesID" />
+          </Key>
+          <Property Name="TransportationServicesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TransportationService" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Village">
+          <Key>
+            <PropertyRef Name="VillageID" />
+          </Key>
+          <Property Name="VillageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VillageName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PlaceToVisitID" Type="int" />
+          <Property Name="WhatFamousID" Type="int" />
+          <Property Name="TownID" Type="int" />
+          <Property Name="Population" Type="nvarchar" MaxLength="50" />
+          <Property Name="Picture" Type="image" />
+        </EntityType>
+        <EntityType Name="WhatFamous">
+          <Key>
+            <PropertyRef Name="WhatFamousID" />
+          </Key>
+          <Property Name="WhatFamousID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WhatFamous" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <Function Name="SP_TownByCity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_VillageByTown" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="TPModelStoreContainer">
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlacesToVisit" EntityType="Self.PlacesToVisit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RulingParty" EntityType="Self.RulingParty" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Town" EntityType="Self.Town" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransportationServices" EntityType="Self.TransportationServices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Village" EntityType="Self.Village" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WhatFamous" EntityType="Self.WhatFamous" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PlateCode" Type="Int32" />
+          <Property Name="PlaceToVisitID" Type="Int32" />
+          <Property Name="WhatFamousID" Type="Int32" />
+          <Property Name="RegionID" Type="Int32" />
+          <Property Name="TransportationServiceID" Type="Int32" />
+          <Property Name="PartyID" Type="Int32" />
+          <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PlacesToVisit">
+          <Key>
+            <PropertyRef Name="PlaceToVisitID" />
+          </Key>
+          <Property Name="PlaceToVisitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlaceToVisit" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="RegionID" />
+          </Key>
+          <Property Name="RegionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RulingParty">
+          <Key>
+            <PropertyRef Name="PartyID" />
+          </Key>
+          <Property Name="PartyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Party" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Town">
+          <Key>
+            <PropertyRef Name="TownID" />
+          </Key>
+          <Property Name="TownID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TownName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CityID" Type="Int32" />
+          <Property Name="PlaceToVisitID" Type="Int32" />
+          <Property Name="WhatFamousID" Type="Int32" />
+          <Property Name="TransportationServiceID" Type="Int32" />
+          <Property Name="PartyID" Type="Int32" />
+          <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TransportationService">
+          <Key>
+            <PropertyRef Name="TransportationServicesID" />
+          </Key>
+          <Property Name="TransportationServicesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TransportationService1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Village">
+          <Key>
+            <PropertyRef Name="VillageID" />
+          </Key>
+          <Property Name="VillageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VillageName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceToVisitID" Type="Int32" />
+          <Property Name="WhatFamousID" Type="Int32" />
+          <Property Name="TownID" Type="Int32" />
+          <Property Name="Population" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="WhatFamou">
+          <Key>
+            <PropertyRef Name="WhatFamousID" />
+          </Key>
+          <Property Name="WhatFamousID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WhatFamous" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="TurkeyProvincesEntitie3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="PlacesToVisits" EntityType="Self.PlacesToVisit" />
+          <EntitySet Name="Regions" EntityType="Self.Region" />
+          <EntitySet Name="RulingParties" EntityType="Self.RulingParty" />
+          <EntitySet Name="Towns" EntityType="Self.Town" />
+          <EntitySet Name="TransportationServices" EntityType="Self.TransportationService" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Villages" EntityType="Self.Village" />
+          <EntitySet Name="WhatFamous" EntityType="Self.WhatFamou" />
+          <FunctionImport Name="SP_TownByCity" ReturnType="Collection(TPModel.SP_TownByCity_Result)" />
+          <FunctionImport Name="SP_VillageByTown" ReturnType="Collection(TPModel.SP_VillageByTown_Result)" />
+        </EntityContainer>
+        <ComplexType Name="SP_TownByCity_Result">
+          <Property Type="String" Name="TownName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="City" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_VillageByTown_Result">
+          <Property Type="String" Name="VillageName" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Town" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TPModelStoreContainer" CdmEntityContainer="TurkeyProvincesEntitie3">
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="TPModel.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="PlateCode" ColumnName="PlateCode" />
+                <ScalarProperty Name="PlaceToVisitID" ColumnName="PlaceToVisitID" />
+                <ScalarProperty Name="WhatFamousID" ColumnName="WhatFamousID" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="TransportationServiceID" ColumnName="TransportationServiceID" />
+                <ScalarProperty Name="PartyID" ColumnName="PartyID" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlacesToVisits">
+            <EntityTypeMapping TypeName="TPModel.PlacesToVisit">
+              <MappingFragment StoreEntitySet="PlacesToVisit">
+                <ScalarProperty Name="PlaceToVisitID" ColumnName="PlaceToVisitID" />
+                <ScalarProperty Name="PlaceToVisit" ColumnName="PlaceToVisit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regions">
+            <EntityTypeMapping TypeName="TPModel.Region">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RulingParties">
+            <EntityTypeMapping TypeName="TPModel.RulingParty">
+              <MappingFragment StoreEntitySet="RulingParty">
+                <ScalarProperty Name="PartyID" ColumnName="PartyID" />
+                <ScalarProperty Name="Party" ColumnName="Party" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Towns">
+            <EntityTypeMapping TypeName="TPModel.Town">
+              <MappingFragment StoreEntitySet="Town">
+                <ScalarProperty Name="TownID" ColumnName="TownID" />
+                <ScalarProperty Name="TownName" ColumnName="TownName" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="PlaceToVisitID" ColumnName="PlaceToVisitID" />
+                <ScalarProperty Name="WhatFamousID" ColumnName="WhatFamousID" />
+                <ScalarProperty Name="TransportationServiceID" ColumnName="TransportationServiceID" />
+                <ScalarProperty Name="PartyID" ColumnName="PartyID" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransportationServices">
+            <EntityTypeMapping TypeName="TPModel.TransportationService">
+              <MappingFragment StoreEntitySet="TransportationServices">
+                <ScalarProperty Name="TransportationServicesID" ColumnName="TransportationServicesID" />
+                <ScalarProperty Name="TransportationService1" ColumnName="TransportationService" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="TPModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Villages">
+            <EntityTypeMapping TypeName="TPModel.Village">
+              <MappingFragment StoreEntitySet="Village">
+                <ScalarProperty Name="VillageID" ColumnName="VillageID" />
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="PlaceToVisitID" ColumnName="PlaceToVisitID" />
+                <ScalarProperty Name="WhatFamousID" ColumnName="WhatFamousID" />
+                <ScalarProperty Name="TownID" ColumnName="TownID" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WhatFamous">
+            <EntityTypeMapping TypeName="TPModel.WhatFamou">
+              <MappingFragment StoreEntitySet="WhatFamous">
+                <ScalarProperty Name="WhatFamousID" ColumnName="WhatFamousID" />
+                <ScalarProperty Name="WhatFamous" ColumnName="WhatFamous" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_TownByCity" FunctionName="TPModel.Store.SP_TownByCity">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TPModel.SP_TownByCity_Result">
+                <ScalarProperty Name="TownName" ColumnName="TownName" />
+                <ScalarProperty Name="City" ColumnName="City" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_VillageByTown" FunctionName="TPModel.Store.SP_VillageByTown">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TPModel.SP_VillageByTown_Result">
+                <ScalarProperty Name="VillageName" ColumnName="VillageName" />
+                <ScalarProperty Name="Town" ColumnName="Town" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
